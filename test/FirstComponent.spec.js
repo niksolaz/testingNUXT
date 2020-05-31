@@ -3,9 +3,8 @@ import First from '@/components/FirstComponent.vue'
 
 describe('First', () => {
     test('is a Vue instance', () => {
-        const wrapper = mount(First)
-        expect.assertions(2);
-        expect(wrapper.isVueInstance()).toBeTruthy()
+        const wrapper = mount(First);
+        expect(wrapper.isVueInstance()).toEqual(true)
         expect(First.data()).toEqual({ name: 'Nicola' })
     })
 })
