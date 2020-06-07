@@ -9,7 +9,6 @@
         <li class="mx-5 my-5">
             <a href="#">Link</a>
         </li>
-        <button class="btn btn-primary mx-5 my-5 loader" disabled="disabled">loading..</button>
     </ul>
 </template>
 <script>

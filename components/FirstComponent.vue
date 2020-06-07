@@ -1,61 +1,76 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-      <b-form-group
-        id="input-group-1"
-        label="Email address:"
-        label-for="input-1"
-        description="We'll never share your email with anyone else."
-      >
-        <b-form-input
+    <form>
+      <div id="input-group-1" label="Email address:" label-for="input-1">
+        <input
           id="input-1"
           v-model="form.email"
           type="email"
           required
           placeholder="Enter email"
-        ></b-form-input>
-      </b-form-group>
+        >
+      </div>
 
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-        <b-form-input
+      <div id="input-group-2" label="Your Name:" label-for="input-2">
+        <input
+          type="text"
           id="input-2"
           v-model="form.name"
           required
           placeholder="Enter name"
-        ></b-form-input>
-      </b-form-group>
+        >
+      </div>
 
-      <b-form-group id="input-group-3" label="Food:" label-for="input-3">
-        <b-form-select
+      <div id="input-group-3" label="Food:" label-for="input-3">
+        <select
           id="input-3"
           v-model="form.food"
           :options="foods"
           required
-        ></b-form-select>
-      </b-form-group>
+        >
+          <option v-for="food in foods" v-bind:value="food.value">
+            {{ food.text }}
+          </option>
+        </select>
+      </div>
 
-      <b-form-group id="input-group-5" label="Price:" label-for="input-5">
-        <b-form-select
+      <div id="input-group-5" label="Price:" label-for="input-5">
+        <select
           id="input-5"
           v-model="form.price"
           :options="prices"
           required
-        ></b-form-select>
-      </b-form-group>
+        >
+          <option v-for="price in prices" v-bind:value="price.value">
+            {{ price.text }}
+          </option>
+        </select>
+      </div>
 
-      <b-form-group id="input-group-4">
-        <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
-          <b-form-checkbox value="me">Check me out</b-form-checkbox>
-          <b-form-checkbox value="that">Check that out</b-form-checkbox>
-        </b-form-checkbox-group>
-      </b-form-group>
-
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
-    </b-form>
-    <b-card class="mt-3" header="Form Data Result">
+      <div id="input-group-4">
+        <div id="checkboxes">
+          <label class="d-flex">
+            <input type="checkbox" v-model="form.checked" value="privacy">
+            <span>Accept Privacy</span>
+          </label>
+          <label class="d-flex">
+            <input type="checkbox" v-model="form.checked" value="terms">
+            <span>Accept Terms</span>
+          </label>
+        </div>
+      </div>
+      <div class="d-flex">
+        <button type="submit" class="btn btn-success" v-on:click="onSubmit" variant="primary">Submit</button>
+        <button type="reset" class="btn btn-danger" v-on:click="onReset" variant="danger">Reset</button>
+      </div>
+    </form>
+    <div class="card mt-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
-    </b-card>
+    </div>
+    <div class="card mt-3" v-if="show">
+      <pre class="m-0 green" v-if="this.result==true">Submit Form Success!</pre>
+      <pre class="m-0 red" v-else>Submit Form Error!</pre>
+    </div>
   </div>
 </template>
 
@@ -87,13 +102,22 @@
           { text: '$ 30', value:'30'},
           { text: '$ 40', value:'40'}
           ],
-        show: true
+        show: false,
+        result: false
       }
     },
     methods: {
       onSubmit(evt) {
         evt.preventDefault()
-        alert(JSON.stringify(this.form))
+        this.show = true; 
+        if(
+          this.form.email !== "" &&
+          this.form.name !== "" &&
+          this.form.food !== null &&
+          this.form.price !== null
+        ){
+          this.result = true;
+        } 
       },
       onReset(evt) {
         evt.preventDefault()
@@ -103,12 +127,41 @@
         this.form.food = null
         this.form.price = null
         this.form.checked = []
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
+        this.show = false;
+        this.result = false;
       }
     }
   }
 </script>
+<style>
+  div {
+    margin-top:5px;
+    margin-bottom: 5px;
+  }
+  input {
+    width:100%;
+    height: 40px;
+  }
+  input[type="checkbox"] {
+    width: 40px;
+    padding:40px;
+  }
+  select {
+    width:100%;
+    height: 40px;
+  }
+  .btn-success {
+    width: 50%;
+    margin: 2px;
+  }
+  .btn-danger {
+    width: 50%;
+    margin: 2px;
+  }
+  .green {
+    border:1px solid green;
+  }
+  .red {
+    border:1px solid red;
+  }
+</style>
