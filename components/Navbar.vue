@@ -1,15 +1,10 @@
 <template>
-    <ul class="d-flex">
-        <li class="mx-5 my-5">
-            <a href="#">Link</a>
-        </li>
-        <li class="mx-5 my-5">
-            <a href="#">Link</a>
-        </li>
-        <li class="mx-5 my-5">
-            <a href="#">Link</a>
-        </li>
-    </ul>
+    <div class="links">
+        <nuxt-link class="link" to="/">Home</nuxt-link>
+        <nuxt-link class="link" to="/link/1">Link 1</nuxt-link>
+        <nuxt-link class="link" to="/link/2">Link 2</nuxt-link>
+        <nuxt-link class="link" to="/link/3">Link 3</nuxt-link>
+    </div>
 </template>
 <script>
 export default {
@@ -17,21 +12,18 @@ export default {
 }
 </script>
 <style>
-    ul {
-        background: #000;
-    }
-    li {
-        list-style-type: none;
-    }
-    a {
-        color: #fff;
-    }
-    a:hover {
-        color: #fff;
-        font-weight: bold;
-        font-size: 20px;
-        text-decoration: none;
-    }
+.links {
+    padding-top:20px;
+    padding-bottom: 20px;
+    background-color: #000;
+    text-align: center;
+}
+.link{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    color: #fff;
+}
     .loader {
         /*border-radius:50%;
         width: 10px;

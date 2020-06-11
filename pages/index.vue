@@ -18,6 +18,11 @@ export default {
   components: {
     Logo,
     First
+  },
+  methods: {
+    goToUser(){
+      return $router.params.id;
+    }
   }
 }
 </script>
