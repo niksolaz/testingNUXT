@@ -1,15 +1,25 @@
 <template>
     <div>
        <h1>Link ID: {{ $route.params.id }}</h1>
+       <p>{{ msg }}</p>
     </div>
 </template>
 <script>
 export default {
     layout: 'default',
-    validate ({ params }) {
+    props: ['msg'],
+    validate (params) {
         // Must be a number
-        console.log(this.id)
-        return /^\d+$/.test(params.id);
+        return /^\d+$/.test(params);
+    },
+    testJest (id) {
+        if( id === undefined ) return false;
+        if( id !== undefined && !isNaN(id)) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }
 </script>
