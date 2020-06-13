@@ -1,6 +1,6 @@
 <template>
     <div>
-       <h1>Link ID: {{ $route.params.id }}</h1>
+       <h1>Link ID: {{ this.$route.params.id }}</h1>
        <p>{{ msg }}</p>
     </div>
 </template>
