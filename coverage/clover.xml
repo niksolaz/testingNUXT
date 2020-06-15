@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1592061546161" clover="3.2.0">
-  <project timestamp="1592061546161" name="All files">
-    <metrics statements="29" coveredstatements="6" conditionals="14" coveredconditionals="5" methods="13" coveredmethods="3" elements="56" coveredelements="14" complexity="0" loc="29" ncloc="29" packages="5" files="7" classes="7"/>
+<coverage generated="1592208489114" clover="3.2.0">
+  <project timestamp="1592208489114" name="All files">
+    <metrics statements="29" coveredstatements="6" conditionals="14" coveredconditionals="5" methods="13" coveredmethods="2" elements="56" coveredelements="13" complexity="0" loc="29" ncloc="29" packages="5" files="7" classes="7"/>
     <package name="components">
       <metrics statements="16" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="0"/>
-      <file name="FirstComponent.vue" path="/Users/nicolasolazzo/Desktop/dev/nuxt-jest/testingNUXT/components/FirstComponent.vue">
+      <file name="FirstComponent.vue" path="/Users/nicolasolazzo/Desktop/testnuxt/testingNUXT/components/FirstComponent.vue">
         <metrics statements="14" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="83" count="0" type="stmt"/>
@@ -21,18 +21,18 @@
         <line num="130" count="0" type="stmt"/>
         <line num="131" count="0" type="stmt"/>
       </file>
-      <file name="Logo.vue" path="/Users/nicolasolazzo/Desktop/dev/nuxt-jest/testingNUXT/components/Logo.vue">
+      <file name="Logo.vue" path="/Users/nicolasolazzo/Desktop/testnuxt/testingNUXT/components/Logo.vue">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
-      <file name="Navbar.vue" path="/Users/nicolasolazzo/Desktop/dev/nuxt-jest/testingNUXT/components/Navbar.vue">
+      <file name="Navbar.vue" path="/Users/nicolasolazzo/Desktop/testnuxt/testingNUXT/components/Navbar.vue">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="layouts">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="default.vue" path="/Users/nicolasolazzo/Desktop/dev/nuxt-jest/testingNUXT/layouts/default.vue">
+      <file name="default.vue" path="/Users/nicolasolazzo/Desktop/testnuxt/testingNUXT/layouts/default.vue">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
@@ -40,7 +40,7 @@
     </package>
     <package name="pages">
       <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="index.vue" path="/Users/nicolasolazzo/Desktop/dev/nuxt-jest/testingNUXT/pages/index.vue">
+      <file name="index.vue" path="/Users/nicolasolazzo/Desktop/testnuxt/testingNUXT/pages/index.vue">
         <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
@@ -50,21 +50,21 @@
     </package>
     <package name="pages.link">
       <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.vue" path="/Users/nicolasolazzo/Desktop/dev/nuxt-jest/testingNUXT/pages/link/index.vue">
+      <file name="index.vue" path="/Users/nicolasolazzo/Desktop/testnuxt/testingNUXT/pages/link/index.vue">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
     </package>
     <package name="pages.link._id">
-      <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
-      <file name="index.vue" path="/Users/nicolasolazzo/Desktop/dev/nuxt-jest/testingNUXT/pages/link/_id/index.vue">
-        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
-        <line num="16" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="17" count="4" type="cond" truecount="4" falsecount="0"/>
+      <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="2"/>
+      <file name="index.vue" path="/Users/nicolasolazzo/Desktop/testnuxt/testingNUXT/pages/link/_id/index.vue">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="14" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="4" type="cond" truecount="4" falsecount="0"/>
+        <line num="16" count="2" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
       </file>
     </package>
   </project>

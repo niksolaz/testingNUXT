@@ -1,13 +1,11 @@
 <template>
     <div>
-       <h1>Link ID: {{ this.$route.params.id }}</h1>
-       <p>{{ msg }}</p>
+       <h1>Link ID: {{ $route.params.id }}</h1>
     </div>
 </template>
 <script>
 export default {
     layout: 'default',
-    props: ['msg'],
     validate (params) {
         // Must be a number
         return /^\d+$/.test(params);

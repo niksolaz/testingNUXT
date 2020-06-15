@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        testingnuxt
+        Testing Nuxt with JEST
       </h1>
       <First />
     </div>
